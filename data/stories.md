@@ -600,3 +600,27 @@
     - utter_appraisal.thank_you
 *greetings.whatsup
     - utter_greetings.whatsup
+
+
+## about ESI
+*agent.residence
+    - utter_agent.residence
+*basic_info
+    -action_get_company_info
+
+
+## Basic information
+*basic_info
+    -action_get_company_info
+
+## story 24
+*agent.occupation
+    - utter_agent.occupation
+*basic_info
+    -action_get_company_info
+
+## story 24
+*agent.residence
+    - utter_agent.residence
+*basic_info
+    -action_get_company_info

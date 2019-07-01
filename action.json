@@ -1,0 +1,26 @@
+{
+  "actions": [
+    {
+      "description": "Default Welcome Intent",
+      "name": "MAIN",
+      "fulfillment": {
+        "conversationName": "quick chat"
+      },
+      "intent": {
+        "name": "actions.intent.MAIN",
+        "trigger": {
+          "queryPatterns": [
+            "talk to quick chat"
+          ]
+        }
+      }
+    }
+  ],
+  "conversations": {
+    "flight information": {
+      "name": "quick chat",
+      "url": "https://01e2b9cb.ngrok.io/webhooks/google_assistant/webhook"
+    }
+  },
+  "locale": "en"
+}

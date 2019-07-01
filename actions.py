@@ -17,14 +17,24 @@ from rasa_core_sdk.events import UserUtteranceReverted
 from rasa_core_sdk.events import AllSlotsReset
 from rasa_core_sdk.events import Restarted
 
-
-		 
 class SaveOrigin(Action):
 	def name(self):
 		return 'action_save_origin'
 		
 	def run(self, dispatcher, tracker, domain):
 		orig = next(tracker.get_latest_entity_values("location"), None)
+		if orig == 'Bangalore':
+			orig = 'BLR'
+		elif orig == 'Delhi':
+			orig = 'DEL'
+		elif orig == 'Mumbai':
+			orig = 'BOM'
+		elif orig == 'Hyderabad':
+			orig='HYD'
+		elif orig == 'Chennai':
+			orig = 'MAA'
+		elif orig == 'Kolkata':
+			orig = 'CCU'	
 		if not orig:
 			dispatcher.utter_message("Please enter a valid airport code")
 			return [UserUtteranceReverted()]
@@ -38,6 +48,18 @@ class SaveDestination(Action):
 		
 	def run(self, dispatcher, tracker, domain):
 		dest = next(tracker.get_latest_entity_values("location"), None)
+		if dest == 'Bangalore':
+			dest = 'BLR'
+		elif dest == 'Delhi':
+			dest = 'DEL'
+		elif dest == 'Mumbai':
+			dest = 'BOM'
+		elif dest == 'Hyderabad':
+			dest='HYD'
+		elif dest == 'Chennai':
+			dest = 'MAA'
+		elif dest == 'Kolkata':
+			dest = 'CCU'
 		if not dest:
 			dispatcher.utter_message("Please enter a valid airport code")
 			return [UserUtteranceReverted()]
@@ -50,6 +72,8 @@ class SaveDate(Action):
 		
 	def run(self, dispatcher, tracker, domain):
 		inp = next(tracker.get_latest_entity_values("date"), None)
+		if inp == 'today':
+			inp = '21-06-2019'
 		if not inp:
 			dispatcher.utter_message("Please enter a valid date")
 			return [UserUtteranceReverted()]
@@ -90,4 +114,25 @@ class getFlightStatus(Action):
 				list2.append(re.sub('\s+', '', b.text))
 		for i in range(len(list1)):
 			dispatcher.utter_message(list1[i]+" : "+list2[i])
+			print("---"+list1[i]+" : "+list2[i])
 		return []
+
+class getComInfo(Action):
+	def name(self):
+		return 'action_get_company_info'
+	
+	def run(self, dispatcher, tracker, domain):
+		url_page ="https://www.easystepin.com/"
+		page = urllib.request.urlopen(url_page)
+		soup = BeautifulSoup(page, 'html.parser')
+		message = soup.find('div', attrs={'class': 'easy_step_left'})
+		results = message.find_all('p')
+		print('Number of results', len(results))
+		mess = []
+		for p in results:
+			mess.append(p.text)
+		print(str(mess))
+		mess1 = ''.join(mess[0:len(results)-3])
+
+		dispatcher.utter_message(mess1)
+		return[]

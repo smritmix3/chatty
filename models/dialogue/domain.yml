@@ -14,6 +14,7 @@ actions:
 - action_save_destination
 - action_save_date
 - action_get_flight
+- action_get_company_info
 - action_slot_reset
 - utter_agent.annoying
 - utter_agent.answer_my_question
@@ -112,6 +113,8 @@ intents:
 - affirmation:
     use_entities: true
 - deny:
+    use_entities: true
+- basic_info:
     use_entities: true
 - agent.acquaintance:
     use_entities: true
@@ -389,13 +392,13 @@ templates:
   - text: Of course we're friends.
   - text: I always enjoy talking to you, friend.
   utter_agent.occupation:
-  - text: Right here.
-  - text: This is my home base and my home office.
-  - text: My office is in this app.
+  - text: I work in Easy Step In.
+  - text: E S I is my home and workplace
+  - text: My office is in Easy Step In.
   utter_agent.origin:
-  - text: The Internet is my home. I know it quite well.
-  - text: I'm from a virtual cosmos.
-  - text: Some call it cyberspace, but that sounds cooler than it is.
+  - text: ' Easy Step In is my home. I know it quite well.'
+  - text: I'm from Easy Step In.
+  - text: Some call it E S I , but that sounds cooler than it is.
   utter_agent.ready:
   - text: Always!
   - text: Sure! What can I do for you?
@@ -403,8 +406,8 @@ templates:
   - text: I'm not a real person, but I certainly exist.
   - text: I must have impressed you if you think I'm real. But no, I'm a virtual being.
   utter_agent.residence:
-  - text: I live in this app all day long.
-  - text: The virtual world is my playground. I'm always here.
+  - text: I live in Easy Step In app all day long.
+  - text: Easy Step In is my playground. I'm always here.
   - text: Right here in this app. Whenever you need me.
   utter_agent.right:
   - text: That's my job.

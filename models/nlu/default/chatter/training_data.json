@@ -5754,12 +5754,48 @@
         "entities": [
           {
             "start": 0,
+            "end": 5,
+            "value": "Delhi",
+            "entity": "location"
+          }
+        ],
+        "text": "Delhi"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
             "end": 3,
             "value": "BOM",
             "entity": "location"
           }
         ],
         "text": "BOM"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Mumbai",
+            "entity": "location"
+          }
+        ],
+        "text": "Mumbai"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Bombay",
+            "entity": "location"
+          }
+        ],
+        "text": "Bombay"
       },
       {
         "intent": "inform",
@@ -5778,12 +5814,36 @@
         "entities": [
           {
             "start": 0,
+            "end": 7,
+            "value": "Kolkata",
+            "entity": "location"
+          }
+        ],
+        "text": "Kolkata"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
             "end": 3,
             "value": "BLR",
             "entity": "location"
           }
         ],
         "text": "BLR"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Bangalore",
+            "entity": "location"
+          }
+        ],
+        "text": "Bangalore"
       },
       {
         "intent": "inform",
@@ -5802,12 +5862,36 @@
         "entities": [
           {
             "start": 0,
+            "end": 9,
+            "value": "Hyderabad",
+            "entity": "location"
+          }
+        ],
+        "text": "Hyderabad"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
             "end": 3,
             "value": "MAA",
             "entity": "location"
           }
         ],
         "text": "MAA"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Chennai",
+            "entity": "location"
+          }
+        ],
+        "text": "Chennai"
       },
       {
         "intent": "inform",
@@ -5844,6 +5928,18 @@
           }
         ],
         "text": "09-01-2019"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "today",
+            "entity": "date"
+          }
+        ],
+        "text": "today"
       },
       {
         "intent": "inform",
@@ -5904,6 +6000,34 @@
       {
         "intent": "deny",
         "text": "not now"
+      },
+      {
+        "intent": "basic_info",
+        "text": "company information"
+      },
+      {
+        "intent": "basic_info",
+        "text": "company info"
+      },
+      {
+        "intent": "basic_info",
+        "text": "esi info"
+      },
+      {
+        "intent": "basic_info",
+        "text": "easystepin"
+      },
+      {
+        "intent": "basic_info",
+        "text": "tell me about your company"
+      },
+      {
+        "intent": "basic_info",
+        "text": "tell me something about ESI"
+      },
+      {
+        "intent": "basic_info",
+        "text": "tell me something about Easy Step In"
       },
       {
         "intent": "user.angry",
@@ -7152,10 +7276,6 @@
       {
         "intent": "user.lonely",
         "text": "I am a loner"
-      },
-      {
-        "intent": "user.lonely",
-        "text": "I don't have any company"
       },
       {
         "intent": "user.lonely",
